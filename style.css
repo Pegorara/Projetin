@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    background: #222327;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+}
+.navigation {
+    display: flex;
+    width: 450px;
+    height: 80px;
+    position: relative;
+    background: #2f2f2f;
+    border-radius: 10px;
+    justify-content: center;
+}
+.navigation ul {
+    display: flex;
+    position: relative;
+    width: 400px;
+}
+.navigation ul li {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    list-style: none;
+}
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    font-weight: 500;
+}
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    line-height: 85px;
+    font-size: 1.5em;
+    transition: 0.5s;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+}
+.navigation ul li a:hover .icon {
+    color: rgba(255, 255, 255, 1);
+}
+.navigation ul li a:active .icon {
+    color: #29fd53;
+    transform: translateY(-8px);
+}
+.navigation ul li a .text {
+    position: absolute;
+    font-weight: 400;
+    font-size: 0.6em;
+    color: #222327;
+    text-transform: uppercase;
+    transform: translateY(0px);
+    letter-spacing: 0.05em;
+    opacity: 0;
+    z-index: 10px;
+}
+.navigation ul li:active a .text {
+    opacity: 1;
+    transform: translateY(16px);
+}
+.indicator{
+    display: flex;
+    width: 80px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.indicator::before {
+    position: absolute;
+    bottom: 14px;
+    width: 80px;
+    content: '';
+    border-radius: 10px;
+    background: #29fd53;
+    height: 16px;
+}
+
